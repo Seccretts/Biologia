@@ -1,1 +1,1 @@
-# Qu-mica
+# Quimica
