@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz de Biologia</title>
+  <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+
+  <header>
+    Quiz de Biologia: Vírus, Moléculas e Bactérias
+  </header>
+
+  <nav>
+    <a href="../inicio/início.html">Início</a>
+    <a href="../conteudo/conteudo.html">Conteúdo</a>
+    <a href="../atividades/atividades.html">Atividades</a>
+    <a href="../sobre/sobre.html">sobre</a>
+</nav>
+
+  <div class="container">
+    <h1>Teste seus conhecimentos</h1>
+    <form id="quizForm" class="quiz-container">
+
+      <!-- Pergunta 1 -->
+      <div class="question">
+        <p>1. Qual destas afirmações sobre os vírus é correta?</p>
+        <label><input type="radio" name="q1" value="a"> São organismos unicelulares com núcleo definido.</label>
+        <label><input type="radio" name="q1" value="b"> São capazes de se reproduzir fora das células.</label>
+        <label><input type="radio" name="q1" value="c"> São parasitas intracelulares obrigatórios.</label>
+        <label><input type="radio" name="q1" value="d"> Realizam fotossíntese.</label>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="question">
+        <p>2. Qual das opções abaixo é uma macromolécula biológica?</p>
+        <label><input type="radio" name="q2" value="a"> Água</label>
+        <label><input type="radio" name="q2" value="b"> Glicose</label>
+        <label><input type="radio" name="q2" value="c"> DNA</label>
+        <label><input type="radio" name="q2" value="d"> Oxigênio</label>
+      </div>
+
+      <!-- Pergunta 3 -->
+      <div class="question">
+        <p>3. As bactérias são classificadas como:</p>
+        <label><input type="radio" name="q3" value="a"> Eucariontes unicelulares</label>
+        <label><input type="radio" name="q3" value="b"> Procariontes unicelulares</label>
+        <label><input type="radio" name="q3" value="c"> Vírus complexos</label>
+        <label><input type="radio" name="q3" value="d"> Moléculas orgânicas</label>
+      </div>
+
+      <!-- Pergunta 4 -->
+      <div class="question">
+        <p>4. Qual molécula é considerada a unidade básica da hereditariedade?</p>
+        <label><input type="radio" name="q4" value="a"> RNA</label>
+        <label><input type="radio" name="q4" value="b"> Proteína</label>
+        <label><input type="radio" name="q4" value="c"> ATP</label>
+        <label><input type="radio" name="q4" value="d"> DNA</label>
+      </div>
+
+      <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+    </form>
+
+    <div id="resultado" class="result"></div>
+  </div>
+
+  <footer>
+    &copy; 2025 Quiz de Biologia. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function verificarRespostas() {
+      const respostas = {
+        q1: "c",
+        q2: "c",
+        q3: "b",
+        q4: "d"
+      };
+
+      let pontuacao = 0;
+      const total = Object.keys(respostas).length;
+
+      for (let chave in respostas) {
+        const selecionada = document.querySelector(`input[name="${chave}"]:checked`);
+        if (selecionada && selecionada.value === respostas[chave]) {
+          pontuacao++;
+        }
+      }
+
+      const resultado = document.getElementById("resultado");
+      resultado.textContent = `Você acertou ${pontuacao} de ${total} perguntas.`;
+    }
+  </script>
+</body>
+</html>
