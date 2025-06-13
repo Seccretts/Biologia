@@ -1,0 +1,113 @@
+body {
+      background-color: #15144d;
+      color: #fafafa;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0a022d;
+      color: #fafafa;
+      padding: 20px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #4b0082;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fbfafa;
+      margin: 0 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #cb74f0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #3c1f6a;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(203, 116, 240, 0.4);
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .quiz-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .question {
+      background-color: #cb74f0;
+      padding: 20px;
+      border-radius: 10px;
+      color: #15144d;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .question p {
+      margin: 0 0 15px 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-weight: normal;
+      color: #fafafa;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    button {
+      align-self: center;
+      padding: 12px 30px;
+      background-color: #70179d;
+      color: #fafafa;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #501370;
+    }
+
+    .result {
+      font-size: 1.4em;
+      text-align: center;
+      margin-top: 30px;
+      color: #cb74f0;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #0a022d;
+      color: #fafafa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
